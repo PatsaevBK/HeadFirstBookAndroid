@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#688ACD"
+    android:background="#009688"
     android:padding="16dp"
     tools:context=".MainActivity">
 
@@ -28,9 +28,11 @@
         android:ems="10"
         android:hint="@string/email_hint"
         android:inputType="textEmailAddress"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/to_label"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="emailAddress" />
 
     <EditText
         android:id="@+id/subject"
@@ -40,9 +42,11 @@
         android:ems="10"
         android:hint="@string/subject_hint"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_address" />
+        app:layout_constraintTop_toBottomOf="@+id/email_address"
+        android:autofillHints="username" />
 
     <Button
         android:id="@+id/button7"
@@ -67,5 +71,6 @@
         app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/subject" />
+        app:layout_constraintTop_toBottomOf="@+id/subject"
+        android:importantForAutofill="no" />
 </androidx.constraintlayout.widget.ConstraintLayout>
